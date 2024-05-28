@@ -41,3 +41,19 @@ button {
 button:hover{
     background-color: #75adf5;
 }
+
+.content{
+    margin-top: 15px;
+
+}
+
+table{
+    border: 3px solid #ccc;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th{
+    background-color: #88bbff;
+    color: #fff;
+}
