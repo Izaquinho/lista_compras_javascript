@@ -1,5 +1,6 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #88bbff;
 }
 
 header {
@@ -45,7 +46,6 @@ button:hover{
 
 .content{
     margin-top: 15px;
-
 }
 
 table{
@@ -62,4 +62,13 @@ table th{
 
 table td img{
     width: 22px;
+}
+
+table td {
+    border: 3px solid #ccc;
+    padding: 8px;
+}
+
+.center {
+    text-align: center;
 }
