@@ -8,6 +8,7 @@ header {
     color: #fff;
     text-align: center;
     font-size: large;
+    border-radius: 5px;
 }
 
 main {
@@ -56,4 +57,9 @@ table{
 table th{
     background-color: #88bbff;
     color: #fff;
+    border: 3px solid #ccc;
+}
+
+table td img{
+    width: 22px;
 }

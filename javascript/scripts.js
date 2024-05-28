@@ -9,6 +9,9 @@ class Produto {
         let produto = this.lerDados();
 
         if (this.validarCampos(produto)) {
+            this.adicionar(produto);
+            this.listaTabela();
+            this.limparCampos();
         }
     }
 
@@ -40,14 +43,63 @@ class Produto {
 
         return true;
     }
-    
-    cancelar() {
-        this.limparCampos();
+
+    adicionar(produto) {
+        this.arrayProdutos.push(produto);
+        this.id++;
     }
-    
+
+    listaTabela() {
+        let tbody = document.getElementById('tbody');
+        tbody.innerHTML = '';
+
+        for (let i = 0; i < this.arrayProdutos.length; i++) {
+            let tr = tbody.insertRow();
+
+            let td_id = tr.insertCell();
+            let td_produto = tr.insertCell();
+            let td_preco = tr.insertCell();
+            let td_acoes = tr.insertCell();
+
+            td_id.innerText = this.arrayProdutos[i].id;
+            td_produto.innerText = this.arrayProdutos[i].nomeProduto;
+            td_preco.innerText = this.arrayProdutos[i].preco;
+
+            let imgEdit = document.createElement('img');
+            imgEdit.src = 'img/editing.png';
+            imgEdit.setAttribute("onclick", "produto.editar(" + JSON.stringify(this.arrayProdutos[i]) + ")");
+
+            let imgDelete = document.createElement('img');
+            imgDelete.src = 'img/trash.png';
+            imgDelete.setAttribute("onclick", "produto.deletar(" + this.arrayProdutos[i].id + ")");
+
+            td_acoes.appendChild(imgEdit);
+            td_acoes.appendChild(imgDelete);
+        }
+    }
+
     limparCampos() {
         document.getElementById('produto').value = '';
         document.getElementById('preco').value = '';
+    }
+
+    cancelar() {
+        this.limparCampos();
+    }
+
+    editar(dados) {
+        // Função para editar produtos
+    }
+
+    deletar(id) {
+        let tbody = document.getElementById('tbody');
+
+        for (let i = 0; i < this.arrayProdutos.length; i++) {
+            if (this.arrayProdutos[i].id === id) {
+                this.arrayProdutos.splice(i, 1);
+                tbody.deleteRow(i);
+            }
+        }
     }
 }
 
