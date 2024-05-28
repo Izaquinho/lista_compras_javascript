@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -30,10 +30,10 @@
             
             <div class="lineInput">
                 <label>Valor</label>
-                <input type="text" id="valor" placeholder="Valor do produto">
+                <input type="text" id="preco" placeholder="Valor do produto">
             </div>
 
-            <button onclick="produto.adicionar()">Adicionar</button>
+            <button onclick="produto.salvar()">Salvar</button>
             <button onclick="produto.cancelar()">Cancelar</button>
         </div>
 
@@ -41,17 +41,23 @@
 
             <table>
                 <thead>
-                    <th>ID</th>
-                    <th>Produto</th>
-                    <th>Valor</th>
-                    <th>Ações</th>
+                    <tr>
+                        <th>ID</th>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
                 </thead>
+                <tbody id="tbody">
+
+                </tbody>
             </table>
 
         </div>
 
     </main>
 
+    <script src="javascript/scripts.js"></script>
 </body>
 
 </html>
