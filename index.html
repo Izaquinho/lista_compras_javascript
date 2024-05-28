@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        Controle de Itens
+    </header>
+
+    <main>
+
+        <div class="title">
+            <h2>Produtos</h2>
+            <span>Lista de produtos para compra</span>
+        </div>
+
+        <div class="card">
+            
+            <div class="lineInput">
+                <label>Produto</label>
+                <input type="text" id="produto" placeholder="Nome do produto">
+            </div>
+            
+            <div class="lineInput">
+                <label>Valor</label>
+                <input type="text" id="valor" placeholder="Valor do produto">
+            </div>
+
+            <button onclick="produto.adicionar()">Adicionar</button>
+            <button onclick="produto.cancelar()">Cancelar</button>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
