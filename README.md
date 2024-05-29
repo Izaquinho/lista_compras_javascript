@@ -44,7 +44,7 @@ Arquivo JavaScript com a lógica para adicionar, editar e remover itens da lista
 
 2 - Abra o arquivo `index.html` em seu navegador web.
 
-3- Utilize a interface para adicionar, editar e remover itens da lista de compras.
+3 - Utilize a interface para adicionar, editar e remover itens da lista de compras.
 
 <details>
     
