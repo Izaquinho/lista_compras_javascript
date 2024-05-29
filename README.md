@@ -1,59 +1,22 @@
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
+<h1 align="center"> Lista de Compras</h1> 
+<h2 align="center"> Web Application</h2>
 
-        h1, h2, h3 {
-            color: #333;
-        }
+Esta é uma aplicação web para gerenciar uma lista de compras, onde é possível criar, editar e remover itens. Este projeto foi desenvolvido como parte de uma atividade acadêmica para aprender os fundamentos de desenvolvimento web usando HTML, CSS e JavaScript, com ênfase no uso de arrays e listas dinâmicas para a manipulação dos itens da lista de compras.
 
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
+## :gear: Funcionalidades
+- `Adicionar Item` : Adiciona novos itens à lista de compras.
+- `Editar Item` : Permite editar itens existentes na lista.
+- `Remover Item` : Remove itens da lista.
 
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 4px;
-            overflow: auto;
-        }
+## 👨‍💻 Tecnologias Utilizadas
+- `HTML` : Estrutura da aplicação.
+- `CSS` : : Estilização e layout.
+- `Javascript` : : Funcionalidades interativas, utilizando arrays e listas dinâmicas para gerenciar os itens.
 
-        .structure {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
 
-<body>
+## 📁 Estrutura do Projeto
 
-    <h1>Lista de Compras Web Application</h1>
-
-    <h2>Descrição</h2>
-    <p>Esta é uma aplicação web para gerenciar uma lista de compras, onde é possível criar, editar e remover itens. Foi desenvolvida com HTML, CSS e JavaScript como parte de uma atividade acadêmica, visando o aprendizado de desenvolvimento web.</p>
-
-    <h2>Funcionalidades</h2>
-    <ul>
-        <li><strong>Adicionar Item:</strong> Adiciona novos itens à lista de compras.</li>
-        <li><strong>Editar Item:</strong> Permite editar itens existentes na lista.</li>
-        <li><strong>Remover Item:</strong> Remove itens da lista.</li>
-    </ul>
-
-    <h2>Tecnologias Utilizadas</h2>
-    <ul>
-        <li><strong>HTML:</strong> Estrutura da aplicação.</li>
-        <li><strong>CSS:</strong> Estilização e layout.</li>
-        <li><strong>JavaScript:</strong> Funcionalidades interativas, utilizando arrays e listas dinâmicas para gerenciar os itens.</li>
-    </ul>
-
-    <h2>Estrutura do Projeto</h2>
-    <pre class="structure">
-<code>
+```
 .
 ├── index.html
 ├── css
@@ -64,49 +27,44 @@
 │   ├── list.png
 │   ├── editing.png
 │   └── trash.png
-└── README.md
-</code>
-    </pre>
+```
 
-    <h3>index.html</h3>
-    <p>O arquivo principal HTML que contém a estrutura da aplicação.</p>
+`index.html`
+O arquivo principal HTML que contém a estrutura da aplicação.
 
-    <h3>css/styles.css</h3>
-    <p>Arquivo CSS contendo os estilos para a aplicação.</p>
+`css/styles.css`
+Arquivo CSS contendo os estilos para a aplicação.
 
-    <h3>javascript/scripts.js</h3>
-    <p>Arquivo JavaScript com a lógica para adicionar, editar e remover itens da lista de compras.</p>
+`javascript/scripts.js`
+Arquivo JavaScript com a lógica para adicionar, editar e remover itens da lista de compras.
 
-    <h2>Como Usar</h2>
-    <ol>
-        <li>Clone este repositório para sua máquina local.</li>
-        <li>Abra o arquivo <code>index.html</code> em seu navegador web.</li>
-        <li>Utilize a interface para adicionar, editar e remover itens da lista de compras.</li>
-    </ol>
+## ❔ Como Usar
 
-    <h2>Funcionalidades Detalhadas</h2>
+Clone este repositório para sua máquina local.
+Abra o arquivo index.html em seu navegador web.
+Utilize a interface para adicionar, editar e remover itens da lista de compras.
 
-    <h3>Adicionar Item</h3>
-    <ul>
-        <li>Digite o nome do produto e o valor nos campos apropriados.</li>
-        <li>Clique no botão "Salvar" para adicionar o item à lista.</li>
-        <li>O item será exibido na lista.</li>
-    </ul>
+<details>
+    
+<summary>Funcionalidades Detalhadas</summary>
 
-    <h3>Editar Item</h3>
-    <ul>
-        <li>Clique no ícone de edição ao lado do item que deseja editar.</li>
-        <li>Modifique o nome do produto ou o valor nos campos.</li>
-        <li>Clique no botão "Salvar" para atualizar o item na lista.</li>
-    </ul>
+## Adicionar Item
+1 - Digite o nome do produto e o valor nos campos apropriados.
 
-    <h3>Remover Item</h3>
-    <ul>
-        <li>Clique no ícone de remoção ao lado do item que deseja remover.</li>
-        <li>O item será removido da lista.</li>
-    </ul>
+2 - Clique no botão "Salvar" para adicionar o item à lista.
 
-    <hr>
-    <p>Este projeto foi desenvolvido como parte de uma atividade acadêmica para aprender os fundamentos de desenvolvimento web usando HTML, CSS e JavaScript, com ênfase no uso de arrays e listas dinâmicas para a manipulação dos itens da lista de compras.</p>
+3 - O item será exibido na lista.
 
-</body>
+## Editar Item
+1 - Clique no ícone de edição ao lado do item que deseja editar.
+
+2 - Modifique o nome do produto ou o valor nos campos.
+
+3 - Clique no botão "Salvar" para atualizar o item na lista.
+
+## Remover Item
+1 - Clique no ícone de remoção ao lado do item que deseja remover.
+
+2 - O item será removido da lista.
+
+</details>
