@@ -60,13 +60,14 @@ table th{
     border: 3px solid #ccc;
 }
 
-table td img{
-    width: 22px;
-}
-
 table td {
     border: 3px solid #ccc;
     padding: 8px;
+}
+
+table td img{
+    width: 22px;
+    padding: 10px;
 }
 
 .center {
