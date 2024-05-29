@@ -29,6 +29,23 @@ main {
     margin-bottom: 10px;
 }
 
+.lineInput input{
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    color: #88bbff;
+}
+
+.lineInput input:focus {
+    border-color: #88bbff;
+    outline: none;
+}
+
+
+.lineInput input::placeholder {
+    color: #ccc;
+}
+
 button {
     border: 0px;
     padding: 10px;
@@ -40,21 +57,21 @@ button {
     transition: all ease 0.3s;
 }
 
-button:hover{
+button:hover {
     background-color: #75adf5;
 }
 
-.content{
+.content {
     margin-top: 15px;
 }
 
-table{
+table {
     border: 3px solid #ccc;
     border-collapse: collapse;
     width: 100%;
 }
 
-table th{
+table th {
     background-color: #88bbff;
     color: #fff;
     border: 3px solid #ccc;
@@ -65,7 +82,7 @@ table td {
     padding: 8px;
 }
 
-table td img{
+table td img {
     width: 22px;
     padding: 10px;
 }
