@@ -40,11 +40,11 @@ Arquivo JavaScript com a lógica para adicionar, editar e remover itens da lista
 
 ## ❔ Como Usar
 
-Clone este repositório para sua máquina local.
+1 - Clone este repositório para sua máquina local.
 
-Abra o arquivo index.html em seu navegador web.
+2 - Abra o arquivo `index.html` em seu navegador web.
 
-Utilize a interface para adicionar, editar e remover itens da lista de compras.
+3- Utilize a interface para adicionar, editar e remover itens da lista de compras.
 
 <details>
     
