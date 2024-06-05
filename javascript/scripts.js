@@ -1,5 +1,4 @@
 class Produto {
-
     constructor() {
         this.id = 1;
         this.arrayProdutos = [];
@@ -21,11 +20,17 @@ class Produto {
     }
 
     lerDados() {
-        let produto = {}
+        let produto = {};
 
         produto.id = this.id;
-        produto.nomeProduto = document.getElementById('produto').value;
-        produto.preco = document.getElementById('preco').value;
+
+        if (this.editId == null) {
+            produto.nomeProduto = $('#produto').val();
+            produto.preco = parseFloat($('#preco').val()).toFixed(2);
+        } else {
+            produto.nomeProduto = $('#produtoModal').val();
+            produto.preco = parseFloat($('#precoModal').val()).toFixed(2);
+        }
 
         return produto;
     }
@@ -37,8 +42,8 @@ class Produto {
             msg += '- Informe o nome do Produto \n';
         }
 
-        if (produto.preco === '') {
-            msg += '- Informe o preço do Produto \n';
+        if (produto.preco === '' || isNaN(produto.preco)) {
+            msg += '- Informe um preço válido para o Produto \n';
         }
 
         if (msg !== '') {
@@ -65,39 +70,29 @@ class Produto {
     }
 
     listaTabela() {
-        let tbody = document.getElementById('tbody');
-        tbody.innerHTML = '';
+        let tbody = $('#tbody');
+        tbody.empty();
 
         for (let i = 0; i < this.arrayProdutos.length; i++) {
-            let tr = tbody.insertRow();
+            let tr = $('<tr></tr>');
 
-            let td_id = tr.insertCell();
-            let td_produto = tr.insertCell();
-            let td_preco = tr.insertCell();
-            let td_acoes = tr.insertCell();
+            let td_id = $('<td></td>').text(this.arrayProdutos[i].id).addClass('center');
+            let td_produto = $('<td></td>').text(this.arrayProdutos[i].nomeProduto);
+            let td_preco = $('<td></td>').text(`R$ ${parseFloat(this.arrayProdutos[i].preco).toFixed(2)}`);
+            let td_acoes = $('<td></td>').addClass('center');
 
-            td_id.innerText = this.arrayProdutos[i].id;
-            td_id.classList.add('center');
-            td_produto.innerText = this.arrayProdutos[i].nomeProduto;
-            td_preco.innerText = this.arrayProdutos[i].preco;
+            let imgEdit = $('<img>').attr('src', 'img/editing.png').click(() => this.editar(this.arrayProdutos[i]));
+            let imgDelete = $('<img>').attr('src', 'img/trash.png').click(() => this.deletar(this.arrayProdutos[i].id));
 
-            let imgEdit = document.createElement('img');
-            imgEdit.src = 'img/editing.png';
-            imgEdit.setAttribute("onclick", "produto.editar(" + JSON.stringify(this.arrayProdutos[i]) + ")");
+            td_acoes.append(imgEdit, imgDelete);
 
-            let imgDelete = document.createElement('img');
-            imgDelete.src = 'img/trash.png';
-            imgDelete.setAttribute("onclick", "produto.deletar(" + this.arrayProdutos[i].id + ")");
-
-            td_acoes.appendChild(imgEdit);
-            td_acoes.appendChild(imgDelete);
-            td_acoes.classList.add('center');
+            tr.append(td_id, td_produto, td_preco, td_acoes);
+            tbody.append(tr);
         }
     }
 
     limparCampos() {
-        document.getElementById('produto').value = '';
-        document.getElementById('preco').value = '';
+        $('#produto, #preco').val('');
         this.editId = null;
     }
 
@@ -108,20 +103,48 @@ class Produto {
     editar(dados) {
         this.editId = dados.id;
 
-        document.getElementById('produto').value = dados.nomeProduto;
-        document.getElementById('preco').value = dados.preco;
+        $('#produtoModal').val(dados.nomeProduto);
+        $('#precoModal').val(dados.preco);
+
+        $('#editModal').show();
     }
 
     deletar(id) {
-        let tbody = document.getElementById('tbody');
-
-        for (let i = 0; i < this.arrayProdutos.length; i++) {
-            if (this.arrayProdutos[i].id === id) {
-                this.arrayProdutos.splice(i, 1);
-                tbody.deleteRow(i);
-            }
-        }
+        this.arrayProdutos = this.arrayProdutos.filter(produto => produto.id !== id);
+        this.listaTabela();
     }
 }
 
 let produto = new Produto();
+
+$(document).ready(function () {
+    $('#salvar').click(function () {
+        produto.salvar();
+    });
+
+    $('#cancelar').click(function () {
+        produto.cancelar();
+    });
+
+    let modal = $('#editModal');
+    let span = $('.close');
+
+    span.click(function () {
+        modal.hide();
+    });
+
+    $(window).click(function (event) {
+        if (event.target.id === 'editModal') {
+            modal.hide();
+        }
+    });
+
+    $('#salvarModal').click(function () {
+        produto.salvar();
+        modal.hide();
+    });
+
+    $('#cancelarModal').click(function () {
+        modal.hide();
+    });
+});

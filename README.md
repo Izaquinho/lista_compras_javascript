@@ -1,7 +1,7 @@
 <h1 align="center"> Lista de Compras</h1> 
 <h2 align="center"> Web Application</h2>
 
-Esta é uma aplicação web para gerenciar uma lista de compras, onde é possível criar, editar e remover itens. Este projeto foi desenvolvido como parte de uma atividade acadêmica para aprender os fundamentos de desenvolvimento web usando HTML, CSS e JavaScript, com ênfase no uso de arrays e listas dinâmicas para a manipulação dos itens da lista de compras.
+Esta é uma aplicação web projetada para gerenciar uma lista de compras, permitindo a criação, edição e remoção de itens. O projeto foi desenvolvido como parte de uma atividade acadêmica, visando ensinar os fundamentos do desenvolvimento web com HTML, CSS e JavaScript. O foco principal está no uso de arrays e listas dinâmicas para a manipulação dos itens da lista de compras. Além disso, a biblioteca jQuery foi empregada no JavaScript para facilitar a manipulação do DOM e a gestão de eventos.
 
 ## :gear: Funcionalidades
 - `Adicionar Item` : Adiciona novos itens à lista de compras.

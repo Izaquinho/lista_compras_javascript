@@ -7,6 +7,8 @@
     <title>Lista</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" type="imagex/png" href="/img/list.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="javascript/scripts.js"></script>
 </head>
 
 <body>
@@ -34,8 +36,8 @@
                 <input type="text" id="preco" placeholder="Valor do produto">
             </div>
 
-            <button onclick="produto.salvar()">Salvar</button>
-            <button onclick="produto.cancelar()">Cancelar</button>
+            <button id="salvar">Salvar</button>
+            <button id="cancelar">Cancelar</button>
         </div>
 
         <div class="content">
@@ -58,7 +60,30 @@
 
     </main>
 
-    <script src="javascript/scripts.js"></script>
+    <div id="editModal" class="modal">
+        
+        <div class="modal-content">
+            
+            <span class="close">&times;</span>
+            
+            <h2>Editar Produto</h2>
+
+            <div class="lineInput">
+                <label for="produtoModal">Nome do Produto:</label>
+                <input type="text" id="produtoModal">
+            </div>
+
+            <div class="lineInput">
+                <label for="precoModal">Preço:</label>
+                <input type="text" id="precoModal">
+            </div>
+
+            <button id="salvarModal">Salvar</button>
+            <button id="cancelarModal">Cancelar</button>
+        </div>
+        
+    </div>
+
 </body>
 
 </html>
