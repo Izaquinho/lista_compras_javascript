@@ -10,8 +10,8 @@ Esta é uma aplicação web projetada para gerenciar uma lista de compras, permi
 
 ## 👨‍💻 Tecnologias Utilizadas
 - `HTML` : Estrutura da aplicação.
-- `CSS` : : Estilização e layout.
-- `Javascript` : : Funcionalidades interativas, utilizando arrays e listas dinâmicas para gerenciar os itens.
+- `CSS` : Estilização e layout.
+- `Javascript` : Funcionalidades interativas, utilizando arrays e listas dinâmicas para gerenciar os itens.
 
 
 ## 📁 Estrutura do Projeto
